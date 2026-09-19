@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+
+:root { --bg:#0d0d0d; --ink:#f1f1f1; --muted:#8f8f8f; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:Arial, Helvetica, sans-serif; font-size:16px; }
+a { color:inherit; text-decoration:none; }
+
+.site-header { height:81px; margin:0 48px; border-bottom:1px solid #2a2a2a; display:flex; align-items:center; justify-content:space-between; }
+.brand, nav a { font-size:14px; font-weight:400; }
+.site-header nav { display:flex; gap:31px; }
+.site-header a:hover, .back-top:hover { color:var(--muted); }
+
+.hero { min-height:710px; padding:123px 80px 75px; display:flex; flex-direction:column; justify-content:space-between; }
+.hero h1 { margin:0; font-size:68px; line-height:.91; letter-spacing:-2.8px; font-weight:400; }
+.hero p { margin:34px 0 0; font-size:16px; line-height:1.15; }
+.scroll { align-self:center; color:var(--muted); font-size:16px; }
+
+.section-label { color:var(--muted); font-size:16px; font-weight:400; margin:0; }
+.work { padding:68px 0 0 80px; }
+.work > .section-label { margin-bottom:-25px; position:relative; z-index:1; }
+.projects { margin-top:0; }
+.project { display:grid; grid-template-columns:28.2% 1fr; min-height:365px; }
+.project-copy { padding:145px 22px 0 0; }
+.project-copy h3 { margin:0; font-size:16px; line-height:1.1; font-weight:400; }
+.project-copy p { margin:3px 0 0; color:#b5b5b5; font-size:16px; line-height:1.1; font-style:italic; }
+.project img { display:block; width:100%; height:365px; object-fit:cover; }
+.project:hover img { opacity:.82; }
+
+.about { padding:110px 83px 176px; }
+.about > .section-label { margin-bottom:164px; }
+.about-intro { display:grid; grid-template-columns:1fr 1fr; gap:37px; padding:0 4px; }
+.about-intro p { margin:0; font-size:16px; line-height:1.05; }
+.about-intro p:last-child { padding-top:68px; }
+.skills { margin:111px 0 0 159px; display:grid; grid-template-columns:1fr 1fr; max-width:643px; gap:102px; }
+.skills h3 { margin:0 0 9px; color:var(--muted); font-size:16px; font-weight:400; }
+.skills p { margin:0; line-height:1.03; font-size:16px; }
+
+.contact { min-height:700px; padding:0 84px 43px; display:flex; flex-direction:column; justify-content:flex-end; }
+.contact h2 { margin:0; font-size:42px; line-height:.99; letter-spacing:-1.6px; font-weight:400; }
+.contact > div:first-child > p { margin:15px 0 0; font-size:16px; }
+.contact-links { margin:49px 0 0 479px; font-size:16px; }
+.contact-links > a { display:inline-block; margin-bottom:2px; }
+.contact-links p { margin:0; }
+.contact-links a:hover { color:var(--muted); }
+.back-top { align-self:center; margin-top:75px; color:var(--muted); font-size:16px; }
+
+@media (max-width:700px) {
+  .site-header { height:64px; margin:0 20px; }
+  .brand, nav a { font-size:11px; } .site-header nav { gap:14px; }
+  .hero { min-height:620px; padding:95px 28px 45px; }
+  .hero h1 { font-size:14.4vw; letter-spacing:-1.7px; }
+  .hero p { font-size:14px; line-height:1.2; } .desktop-only { display:none; }
+  .scroll { font-size:13px; }
+  .work { padding:55px 0 0 28px; } .section-label { font-size:14px; }
+  .work > .section-label { margin-bottom:25px; }
+  .project { display:flex; flex-direction:column; min-height:0; margin-bottom:38px; }
+  .project-copy { order:2; padding:15px 0 0; } .project-copy h3, .project-copy p { font-size:14px; }
+  .project img { height:auto; aspect-ratio:2.31; }
+  .about { padding:72px 28px 105px; } .about > .section-label { margin-bottom:80px; }
+  .about-intro { grid-template-columns:1fr; gap:35px; padding:0; } .about-intro p { font-size:15px; line-height:1.12; }
+  .about-intro p:last-child { padding-top:0; } .skills { margin:72px 0 0 46px; gap:45px; max-width:none; }
+  .skills h3, .skills p { font-size:14px; }
+  .contact { min-height:540px; padding:0 28px 30px; } .contact h2 { font-size:8.5vw; letter-spacing:-1px; }
+  .contact > div:first-child > p, .contact-links { font-size:14px; } .contact-links { margin:44px 0 0 0; align-self:flex-end; }
+  .back-top { font-size:13px; margin-top:66px; }
+}
